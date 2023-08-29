@@ -11,10 +11,9 @@ main{
 .main-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 0px;
     max-width: 1200px;
-    margin-left: 60;
-    margin-right: -20px;
+    margin-left:auto;
 }
 
 .title {
@@ -33,15 +32,15 @@ main{
     background-color: rgb(10, 10, 109);
 }
 .product{
-    width: 410px;
-height: 400px;
+    width: 360px;
+height: 480px;
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
 }
 .image{
-    width: 400px;
+    width: 350px;
     height: 350px;
 border-radius: 10px;
 }
@@ -64,20 +63,22 @@ border-radius: 10px;
     .main-container{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 0px;
+        gap: -80px;
         max-width: 1000px;
         margin: 80px auto;
       
     }
     .product{
-        width: 480px;
+        width: 460px;
     height: 500px;
-    display: flex;
+    margin: 0;
+padding: 0;  
+  display: flex;
     justify-content: center;
     align-items: center;
     }
     .image{
-        width: 400px;
+        width: 450px;
         height: 380px;
     border-radius: 10px;
     }
@@ -94,18 +95,18 @@ border-radius: 10px;
         margin: auto;
     }
     .product{
-        width: 290px;
+        width: 350px;
     height: 450px;    
     }
     .image{
-        width: 290px;
+        width: 340px;
         height: 280px;
     border-radius: 10px;
     }
 }
 @media screen and (max-width: 480px){
     main{
-        margin: 60px auto;
+        margin: 40px auto;
     }
     .main-container{
         display: grid;
