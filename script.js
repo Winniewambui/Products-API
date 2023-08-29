@@ -13,20 +13,20 @@ function displayProducts(){
     }).then((response) =>{
         return response.json();
     }).then((data) =>{
-        console.log(data)
+        // console.log(data)
         // const productsArray = data.fields;
 
         const productsContainer = data.map(product =>{
-            console.log(product.fields.image[0]);
+            // console.log(product.fields.image[0]);
             const formatPrice = product.fields.price/100
             return`
-            <article class="product">
+            <a href="product.html?id=${product.id}" class="product">
             <img src=${product.fields.image[0].url} alt="image" class="image">
     <div class="details">
         <h3 class="name">${product.fields.name}</h3>
     <h1 class="price">$ ${formatPrice}</h1>
     </div>
-        </article>
+        </a>
             `
         })
         document.querySelector('.main-container').innerHTML = productsContainer.join('');
@@ -34,3 +34,4 @@ function displayProducts(){
         console.error(err);
     })
 }
+
